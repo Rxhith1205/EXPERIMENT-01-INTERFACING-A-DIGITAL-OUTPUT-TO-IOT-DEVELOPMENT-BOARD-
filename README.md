@@ -1,8 +1,8 @@
-###  DATE: 
+###  DATE: 05/02/225
 
-###  NAME: 
-###  ROLL NO :
-###  DEPARTMENT: 
+###  NAME: ROHITH HARIHARAN M
+###  ROLL NO : 212223220087
+###  DEPARTMENT: INFORMATION TECHNOLOGY 
 
 
 
@@ -86,13 +86,35 @@ The main features of LPC2148 include the following.
 
 
 ## STM 32 CUBE PROGRAM :
+```
+void SystemClock_Config(void);
+static void MX_GPIO_Init(void);
 
-
+int main(void)
+{
+  
+  HAL_Init();
+  SystemClock_Config();
+  MX_GPIO_Init();
+  while (1)
+  {
+	  HAL_GPIO_WritePin(GPIOA, GPIO_PIN_0, GPIO_PIN_RESET);
+	  HAL_Delay(3000);
+	  HAL_GPIO_WritePin(GPIOA, GPIO_PIN_0, GPIO_PIN_SET);
+	  HAL_Delay(3000);
+  }
+```
 
 
 
 ## OUTPUT  :
- 
+1.LIGHT ON
+![WhatsApp Image 2025-03-05 at 11 26 22_f53ad2c4](https://github.com/user-attachments/assets/6cef4bc8-c567-4604-bbc3-ac39e43500b7)
+
+
+2.LIGHT OFF
+![WhatsApp Image 2025-03-05 at 11 26 23_2d5d8693](https://github.com/user-attachments/assets/cd2a715a-ad72-4d89-b7b1-cd67e4eb95b6)
+
  
  
  
